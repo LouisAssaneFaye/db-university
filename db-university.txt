@@ -25,3 +25,20 @@ SELECT *
 FROM `exams`
 WHERE `exams`.`date` = '20-06-2020'
 AND `exams`.`hour`>= '14';
+
+Selezionare tutti i corsi di laurea magistrale:
+
+SELECT * 
+FROM `degrees` 
+WHERE `degrees`.`level` = 'magistrale';
+
+Da quanti dipartimenti è composta l'università?
+
+SELECT COUNT(`id`)
+FROM `departments`;
+
+Quanti sono gli insegnanti che non hanno un numero di telefono?
+
+SELECT *
+FROM `teachers`
+WHERE `teachers`.`phone` IS NOT NULL;
